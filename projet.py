@@ -320,7 +320,7 @@ def df_plot_Camembert13():
 
 ###########################################################
 
-@st.cache(suppress_st_warning=True)
+
 def map_info():
 #df_coord = data[['longitude','latitude']]
     batiment69 = get_batiment69()
