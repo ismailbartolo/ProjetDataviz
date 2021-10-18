@@ -93,7 +93,7 @@ df_map_France_PrixSup_mean_Maison = df_map_France_PrixSup_mean_Maison()
 
 
 
-@st.cache(suppress_st_warning=True)
+
 def get_prix_bati69():
     batiments = data[['code_departement','valeur_fonciere', 'surface_reelle_bati', 'nombre_pieces_principales','code_type_local', 'type_local']].drop_duplicates()
     batiments = batiments.mask(batiments["code_departement"]!=69)
@@ -102,7 +102,7 @@ def get_prix_bati69():
     return batiment_prix69
 
 ########################################################
-@st.cache(suppress_st_warning=True)
+
 def get_info69():
     batiments = data[['code_departement','valeur_fonciere', 'surface_reelle_bati', 'nombre_pieces_principales','code_type_local', 'type_local']].drop_duplicates()
     batiments = batiments.mask(batiments["code_departement"]!=69)
@@ -125,14 +125,13 @@ def get_info13():
     return batiment_info
 ##################################################################
 
-@st.cache(suppress_st_warning=True)
+
 def get_nomCommune69():
     nom_commune69 = data[['nom_commune','code_departement','nature_mutation',]].drop_duplicates()
     nom_commune_69 = nom_commune69.mask(nom_commune69['code_departement']!=69)
     nom_commune_69_ = nom_commune_69.dropna()
     return nom_commune_69_
 
-@st.cache(suppress_st_warning=True)
 def get_nomCommune75():
     nom_commune75 = data[['nom_commune','code_departement','nature_mutation']].drop_duplicates()
     nom_commune_75 = nom_commune75.mask(nom_commune75['code_departement']!=75)
@@ -147,7 +146,7 @@ def get_nomCommune13():
     return nom_commune_75_
 ###################################################################
 
-@st.cache(suppress_st_warning=True)
+
 def get_mean69():
     batiments = data[['code_departement','valeur_fonciere', 'surface_reelle_bati', 'nombre_pieces_principales','code_type_local', 'type_local']].drop_duplicates()
     batiments = batiments.mask(batiments["code_departement"]!=69)
@@ -157,7 +156,7 @@ def get_mean69():
     return  batiment_mean
 
 
-@st.cache(suppress_st_warning=True)
+
 def get_mean75():
     batiments = data[['code_departement','valeur_fonciere', 'surface_reelle_bati', 'nombre_pieces_principales','code_type_local', 'type_local']].drop_duplicates()
     batiments = batiments.mask(batiments["code_departement"]!=75)
@@ -166,7 +165,7 @@ def get_mean75():
     batiment_mean= batiments['valeur_fonciere'].mean()
     return  batiment_mean
 
-@st.cache(suppress_st_warning=True)
+
 def get_mean13():
     batiments = data[['code_departement','valeur_fonciere', 'surface_reelle_bati', 'nombre_pieces_principales','code_type_local', 'type_local']].drop_duplicates()
     batiments = batiments.mask(batiments["code_departement"]!=13)
@@ -176,7 +175,7 @@ def get_mean13():
     return  batiment_mean
 ###################################################################
 
-@st.cache(suppress_st_warning=True)
+
 def get_batiment69():
     batiments = data[['code_departement','valeur_fonciere', 'surface_reelle_bati', 'nombre_pieces_principales','code_type_local', 'type_local']].drop_duplicates()
     batiments = batiments.mask(batiments["code_departement"]!=69)
@@ -185,7 +184,7 @@ def get_batiment69():
     return  batiments
 
 
-@st.cache(suppress_st_warning=True)
+
 def get_batiment75():
     batiments = data[['code_departement','valeur_fonciere', 'surface_reelle_bati', 'nombre_pieces_principales','code_type_local', 'type_local']].drop_duplicates()
     batiments = batiments.mask(batiments["code_departement"]!=75)
@@ -193,7 +192,7 @@ def get_batiment75():
     batiments = batiments.sort_values(by=['code_type_local'])
     return  batiments
 
-@st.cache(suppress_st_warning=True)
+
 def get_batiment13():
     batiments = data[['code_departement','valeur_fonciere', 'surface_reelle_bati', 'nombre_pieces_principales','code_type_local', 'type_local']].drop_duplicates()
     batiments = batiments.mask(batiments["code_departement"]!=13)
@@ -228,7 +227,7 @@ def plotChart75():
 
 
 # Dataframe pour plot valeur fonciere en fonction de la surface des appart region 69
-@st.cache(suppress_st_warning=True)
+
 def df4():
     df = data[['code_departement','valeur_fonciere', 'surface_reelle_bati', 'nombre_pieces_principales','code_type_local', 'type_local']].drop_duplicates()
     df1 = df.mask(df["code_departement"]!=69)
@@ -240,7 +239,7 @@ def df4():
     return df1
 
 ###################################################################################################
-@st.cache()
+
 # fonction qui sert à recuperer une sous dataframe extraite trier par code_commune region 75,69,13
 def df75():
     df = data[['code_departement','code_commune','valeur_fonciere', 'surface_reelle_bati', 'nombre_pieces_principales','code_type_local', 'type_local']].drop_duplicates()
