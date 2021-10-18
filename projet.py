@@ -17,7 +17,7 @@ st.title('Projet Datavisualization')
 
 @st.cache(suppress_st_warning=True)
 def load_data():
-    file = 'full_2020.csv'
+    file = './full_2020.csv'
     data = pd.read_csv(file)
     
     return data
