@@ -17,7 +17,7 @@ st.title('Projet Datavisualization')
 
 @st.cache(suppress_st_warning=True)
 def load_data():
-    file = './full_2020_2.csv'
+    file = 'full_2020_2.csv'
     data = pd.read_csv(file)
     
     return data
@@ -26,7 +26,7 @@ def load_data():
 
 # Create a text element and let the reader know the data is loading.
 data_load_state = st.text('Loading data...')
-# Load 10,000 rows of data into the dataframe.
+# Load 121000rows of data into the dataframe.
 
 data=load_data()
 
