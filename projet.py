@@ -29,7 +29,7 @@ data_load_state = st.text('Loading data...')
 # Load 10,000 rows of data into the dataframe.
 
 data=load_data()
-data =data.sample(121000)
+
 
 
 
