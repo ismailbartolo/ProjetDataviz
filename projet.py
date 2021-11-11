@@ -30,7 +30,7 @@ data_load_state = st.text('Loading data...')
 
 data=load_data()
 
-
+data
 
 
 # Notify the reader that the data was successfully loaded.
